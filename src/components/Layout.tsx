@@ -7,7 +7,7 @@ const Layout = ({ children }: PropsWithChildren) => {
     return (
         <>
             <Navbar/>
-            <main className='mb-48 lg:mb-32 dark:text-white'>{children}</main>
+            <main className="mb-32 lg:mb-24 dark:text-white">{children}</main>
             <Footer/>
         </>
     )

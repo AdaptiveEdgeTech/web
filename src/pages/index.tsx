@@ -1,7 +1,16 @@
 import Head from 'next/head'
 import Sponsors from '@/components/Sponsors'
+import Link from 'next/link'
 
 export default function Home() {
+
+    const handleScroll = (targetId: string) => {
+        const elem = document.getElementById(targetId);
+        elem?.scrollIntoView({
+            behavior: "smooth",
+        })
+    }
+
     return (
         <>
             <Head>
@@ -10,12 +19,18 @@ export default function Home() {
             <>
                 <div className="text-center content-center my-16">
                     <h1 className="flex flex-col leading-none text-6xl lg:text-9xl font-extrabold">
-                        <span className='relative select-none bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-emerald-400
-                        dark:before:bg-white before:bg-black before:content-["Explore."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-1'>Explore.</span>
-                        <span className='relative select-none bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-pink-600
-                        dark:before:bg-white before:bg-black before:content-["Collaborate."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-2'>Collaborate.</span>
-                        <span className='relative select-none bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400
-                        dark:before:bg-white before:bg-black before:content-["Empower."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-3'>Empower.</span>
+                        <span
+                            onClick={() => handleScroll('explore-block')}
+                            className='relative select-none bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-emerald-400
+                            dark:before:bg-white before:bg-black before:content-["Explore."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-1'>Explore.</span>
+                        <span
+                            onClick={() => handleScroll('collaborate-block')}
+                            className='relative select-none bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-pink-600
+                            dark:before:bg-white before:bg-black before:content-["Collaborate."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-2'>Collaborate.</span>
+                        <span
+                            onClick={() => handleScroll('empower-block')}
+                            className='relative select-none bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400
+                            dark:before:bg-white before:bg-black before:content-["Empower."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-3'>Empower.</span>
                     </h1>
                 </div>
                 <div id="explore-block" className="text-center content-center my-12 flex flex-col">
