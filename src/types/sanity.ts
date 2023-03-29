@@ -1,10 +1,12 @@
 export type Post = {
+    _id: string;
     author: Author;
     body: Block[];
     categories: Category[];
     slug: string | null;
     title: string;
-    mainImage: string | null;
+    mainImage: string;
+    _updatedAt: string;
 }
 
 export type Category = {
@@ -14,7 +16,7 @@ export type Category = {
 
 export type Author = {
     name: string;
-    image: string | null;
+    image: string;
     slug: string | null;
 }
 
