@@ -32,7 +32,7 @@ export default function Home() {
                             className='relative select-none bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400
                             dark:before:bg-white before:bg-black before:content-["Empower."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-3'>Empower.</span>
                     </h1>
-                    <h2 className='text-4xl lg:text-5xl mt-24'>No bullshit. No politics. Just fun with tech.</h2>
+                    <h2 className='text-4xl lg:text-5xl mt-24'></h2>
                     <h3 className='text-2xl lg:text-2xl max-w-4xl mx-auto'>At Adaptive Edge Technology we explore practical applications of emerging technologies to empower individuals and organisations.</h3>
                 </div>
                 <div id="explore-block" className="text-center content-center my-12 flex flex-col">
