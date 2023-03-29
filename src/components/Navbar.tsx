@@ -14,8 +14,8 @@ const Navbar = () => {
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Adaptive Edge Technologies</span>
-                        <img className="h-12 w-auto dark:hidden" src="logo/logo.svg" alt="" />
-                        <img className="h-12 w-auto hidden dark:block" src="logo/logo-w.svg" alt="" />
+                        <img className="h-10 lg:h-12 w-auto dark:hidden" src="logo/logo-left-tag.svg" alt="" />
+                        <img className="h-10 lg:h-12 w-auto hidden dark:block" src="logo/logo-left-tag-w.svg" alt="" />
                     </Link>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
@@ -25,17 +25,17 @@ const Navbar = () => {
                         </Link>
                     ))}
                 </div>
-                <div className="flex flex-1 items-center justify-end gap-x-6">
-                    <Link href="/login" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900 dark:lg:text-white">
-                        Log in
-                    </Link>
-                    <Link
-                        href="/signup"
-                        className="hidden lg:block rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >
-                        Sign up
-                    </Link>
-                </div>
+                {/*<div className="flex flex-1 items-center justify-end gap-x-6">*/}
+                {/*    <Link href="/login" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900 dark:lg:text-white">*/}
+                {/*        Log in*/}
+                {/*    </Link>*/}
+                {/*    <Link*/}
+                {/*        href="/signup"*/}
+                {/*        className="hidden lg:block rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"*/}
+                {/*    >*/}
+                {/*        Sign up*/}
+                {/*    </Link>*/}
+                {/*</div>*/}
                 <div className="flex lg:hidden">
                     <button
                         type="button"
@@ -53,11 +53,8 @@ const Navbar = () => {
                     <div className="flex items-center justify-between">
                         <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
-                            <img
-                                className="h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                                alt=""
-                            />
+                            <img className="h-10 w-auto dark:hidden" src="logo/logo-left-tag.svg" alt="" />
+                            <img className="h-10 w-auto hidden dark:block" src="logo/logo-left-tag-w.svg" alt="" />
                         </Link>
                         <button
                             type="button"
@@ -82,21 +79,21 @@ const Navbar = () => {
                                     </Link>
                                 ))}
                             </div>
-                            <div className="py-6">
-                                <Link
-                                    href="/login"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
-                                >
-                                    Log in
-                                </Link>
-                                <Link
-                                    href="/signup"
-                                    className="ml-auto rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                >
-                                    Sign up
-                                </Link>
-                            </div>
+                            {/*<div className="py-6">*/}
+                            {/*    <Link*/}
+                            {/*        href="/login"*/}
+                            {/*        onClick={() => setMobileMenuOpen(false)}*/}
+                            {/*        className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"*/}
+                            {/*    >*/}
+                            {/*        Log in*/}
+                            {/*    </Link>*/}
+                            {/*    <Link*/}
+                            {/*        href="/signup"*/}
+                            {/*        className="ml-auto rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"*/}
+                            {/*    >*/}
+                            {/*        Sign up*/}
+                            {/*    </Link>*/}
+                            {/*</div>*/}
                         </div>
                     </div>
                 </Dialog.Panel>
