@@ -3,6 +3,7 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { navigation } from '@/utils/constants'
 import Link from 'next/link'
+import Image from 'next/image'
 
 
 const Navbar = () => {
