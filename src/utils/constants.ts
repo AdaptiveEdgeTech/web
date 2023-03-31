@@ -1,8 +1,10 @@
 import { MenuItem, Sponsor } from '@/types'
+import { PortableTextReactComponents } from '@portabletext/react/src/types'
+import React from 'react'
 
 export const navigation: MenuItem[] = [
     { name: 'Home', href: '/' , visible: true},
-    { name: 'Blog', href: '/blog', visible: false },
+    { name: 'Blog', href: '/blog', visible: true },
     { name: 'Projects', href: '/projects', visible: false },
 ]
 

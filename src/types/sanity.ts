@@ -21,9 +21,12 @@ export type Author = {
 }
 
 export type Block = {
+    _type: string;
     children: BlockChild[];
     markDefs: MarkDef[];
-    style: 'normal' | 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4'
+    style: 'normal' | 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4';
+    level: number;
+    listItem: 'bullet' | 'number'
 }
 
 export type MarkDef = {
@@ -32,6 +35,9 @@ export type MarkDef = {
 }
 
 export type BlockChild = {
-    marks: string[];
+    _type: string;
+    marks: Mark[];
     text: string;
 }
+
+export type Mark = 'em' | 'strong'
