@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Sponsors from '@/components/Sponsors'
 import Image from 'next/image'
 
-export default function Home() {
+export default function HomePage() {
 
     const handleScroll = (targetId: string) => {
         const elem = document.getElementById(targetId)

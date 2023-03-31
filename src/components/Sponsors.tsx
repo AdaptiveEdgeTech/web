@@ -28,15 +28,15 @@ const Sponsors = () => {
                 <div
                     className=" flex flex-row justify-center mx-auto mt-5 py-5 max-w-lg items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none overflow-y-scroll">
                     {sponsors.map((item, index) => (
-                        <>
+                        <span key={`sponsor-logo-${index}`}>
                             {item.url ? (
-                                <a key={`sponsor-logo-${index}`} href={item.url} rel="noreferrer" target='_blank'>
+                                <a href={item.url} rel="noreferrer" target='_blank'>
                                     {renderLogo(item)}
                                 </a>
                             ) : (
                                 <>{renderLogo(item)}</>
                             )}
-                        </>
+                        </span>
                     ))}
                 </div>
             </div>

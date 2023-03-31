@@ -14,8 +14,8 @@ const Navbar = () => {
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Adaptive Edge Technologies</span>
-                        <img className="h-10 lg:h-12 w-auto dark:hidden" src="logo/logo-left-tag.svg" alt="" />
-                        <img className="h-10 lg:h-12 w-auto hidden dark:block" src="logo/logo-left-tag-w.svg" alt="" />
+                        <img className="h-10 lg:h-12 w-auto dark:hidden" src="/logo/logo-left-tag.svg" alt="" />
+                        <img className="h-10 lg:h-12 w-auto hidden dark:block" src="/logo/logo-left-tag-w.svg" alt="" />
                     </Link>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
@@ -53,8 +53,8 @@ const Navbar = () => {
                     <div className="flex items-center justify-between">
                         <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
-                            <img className="h-10 w-auto dark:hidden" src="logo/logo-left-tag.svg" alt="" />
-                            <img className="h-10 w-auto hidden dark:block" src="logo/logo-left-tag-w.svg" alt="" />
+                            <img className="h-10 w-auto dark:hidden" src="/logo/logo-left-tag.svg" alt="" />
+                            <img className="h-10 w-auto hidden dark:block" src="/logo/logo-left-tag-w.svg" alt="" />
                         </Link>
                         <button
                             type="button"
