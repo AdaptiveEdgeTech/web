@@ -1,4 +1,4 @@
-import { PropsWithChildren, useEffect } from 'react'
+import { PropsWithChildren } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { useRouter } from 'next/router'

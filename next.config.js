@@ -5,7 +5,6 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {hostname: 'cdn.sanity.io'},
-      {hostname: 'tailwindui.com'},
     ]
   }
 }

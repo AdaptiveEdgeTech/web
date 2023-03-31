@@ -1,5 +1,4 @@
 import { Post } from '@/types'
-import { ComponentProps } from 'react'
 
 type BlogListItemProps = {
     post: Post
@@ -38,5 +37,3 @@ const BlogListItem = ({post}: BlogListItemProps) => {
 }
 
 export default BlogListItem
-
-//Blog item: {JSON.stringify(blog)}
