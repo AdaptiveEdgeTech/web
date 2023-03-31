@@ -33,7 +33,7 @@ module.exports = {
             }
         },
         animation: {
-            '<gradient-1>': 'gradient-1 8s infinite',
+            'gradient-1': 'gradient-1 8s infinite',
             'gradient-2': 'gradient-2 8s infinite',
             'gradient-3': 'gradient-3 8s infinite',
         }
