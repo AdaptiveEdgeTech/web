@@ -2,7 +2,7 @@ import { MenuItem, Sponsor } from '@/types'
 
 export const navigation: MenuItem[] = [
     { name: 'Home', href: '/' , visible: true},
-    { name: 'Blog', href: '/blog', visible: true },
+    { name: 'Blog', href: '/blog', visible: false },
     { name: 'Projects', href: '/projects', visible: false },
 ]
 
