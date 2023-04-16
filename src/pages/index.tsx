@@ -19,7 +19,7 @@ export default function HomePage() {
             <>
                 <div className="text-center content-center my-16">
                     <div className='relative mx-auto mb-8 h-64 lg:h-96 w-64 lg:w-96'>
-                        <Image src='/mascot.png' alt='Super hero mascot' fill={true}/>
+                        <Image src='/mascot.png' alt='Super hero mascot' fill={true} loading='eager'/>
                     </div>
                     <h1 className="flex flex-col leading-none text-6xl lg:text-9xl font-extrabold">
                         <span
