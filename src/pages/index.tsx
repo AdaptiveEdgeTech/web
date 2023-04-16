@@ -34,7 +34,7 @@ export default function HomePage() {
                             dark:before:bg-white before:bg-black before:content-["Empower."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-3'>Empower.</span>
                     </h1>
                     <h2 className="text-4xl lg:text-5xl mt-24"></h2>
-                    <h3 className="text-2xl lg:text-2xl max-w-4xl mx-auto">Adaptive Edge Technologies: Unleashing the 'Super Human' in everyone. Empower individuals and organizations with cutting-edge, human-centered solutions. Elevate potential, innovate, and conquer the world together.</h3>
+                    <h3 className="text-2xl lg:text-2xl max-w-4xl mx-auto">Adaptive Edge Technologies: Unleashing the &apos;Super Human&apos; in everyone. Empower individuals and organizations with cutting-edge, human-centered solutions. Elevate potential, innovate, and conquer the world together.</h3>
                 </div>
                 <div id="explore-block" className="text-center content-center my-12 flex flex-col">
                     <span className="h-16 w-0.5 bg-gradient-to-b from-blue-50 to-blue-400 self-center"/>
