@@ -65,5 +65,14 @@ export default defineType({
             type: 'image',
             options: {hotspot: true},
         },
+        {
+            type: 'file',
+            options: {
+                accept: 'video/*'
+            }
+        },
+        {
+            type: 'remoteVideo'
+        }
     ],
 })
