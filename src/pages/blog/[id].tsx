@@ -59,7 +59,10 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({params}) => {
         const query = `*[_id=='${params.id}']{_id,_updatedAt,title,'slug':slug.current,'body':body[]{_type,style,level,listItem,'assetUrl':asset->url,url,'children':children[]{_type,marks,text},'markDefs':markDefs[]{_key,href}},'mainImage':mainImage.asset->url,'categories': categories[]->{title,description}, 'author': author->{name,'image':image.asset->url,'slug':slug.current}}`
         // console.log('Query: ', query)
         const posts: Post[] = await client.fetch(query)
-        return {props: {post: posts[0]}}
+        return {
+            props: {post: posts[0]},
+            revalidate: true
+        }
     }
     return {redirect: {destination: '/', permanent: true}}
 
