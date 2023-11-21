@@ -1,7 +1,5 @@
 import { createClient } from 'next-sanity'
-import { clientConfig, previewConfig } from '@/sanity.config'
-import { definePreview } from '@sanity/preview-kit'
+import { clientConfig } from '@/sanity.config'
 
 export const client = createClient(clientConfig)
 
-export const usePreview = definePreview(previewConfig)
