@@ -3,7 +3,6 @@ import {defineType} from 'sanity'
 import authorType from './author'
 import blockContentType from './blockContent'
 import categoryType from './category'
-import { Rule } from '@sanity/validation'
 
 export default defineType({
     name: 'post',
