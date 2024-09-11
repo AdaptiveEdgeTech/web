@@ -17,10 +17,21 @@ export default function HomePage() {
                 <meta name="description" content="Home page for Adaptive Edge Technologies"/>
             </Head>
             <>
-                <div className="text-center content-center my-16">
-                    <div className='relative mx-auto mb-8 h-64 lg:h-96 w-64 lg:w-96'>
-                        <Image src='/mascot.png' alt='Super hero mascot' fill={true} loading='eager'/>
-                    </div>
+                <div className="flex flex-row justify-center">
+            {/*image container*/}    
+                           <div className = 'w-48 h-48 relative'>
+                                <Image 
+                                    src="/mascot.png" 
+                                    alt="Super hero mascot" 
+                                    fill={true}
+                                    priority
+                                    sizes='(max-width: 1024x) 100vw, 33vw, (max-height: 1024x) 100vw, 33vw'
+
+                                />
+                            </div>
+                </div>
+                                
+                <div className="text-center content-center my-16">    
                     <h1 className="flex flex-col leading-none text-6xl lg:text-9xl font-extrabold">
                         <span
                             onClick={() => handleScroll('explore-block')}
@@ -82,6 +93,7 @@ export default function HomePage() {
                         lasting, positive change in the world.</p>
                 </div>
                 <Sponsors/>
+            
             </>
         </>
     )
