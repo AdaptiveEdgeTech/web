@@ -3,6 +3,19 @@ import type { AppProps } from 'next/app'
 import Layout from '@/components/Layout'
 import Head from 'next/head'
 import { Analytics } from '@vercel/analytics/react'
+import { Cormorant_Garamond, Manrope } from 'next/font/google'
+
+const displayFont = Cormorant_Garamond({
+    subsets: ['latin'],
+    weight: ['400', '600', '700'],
+    variable: '--font-display',
+})
+
+const bodyFont = Manrope({
+    subsets: ['latin'],
+    weight: ['400', '500', '600'],
+    variable: '--font-body',
+})
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
@@ -11,10 +24,12 @@ export default function App({ Component, pageProps }: AppProps) {
                 <title>Adaptive Edge Technologies</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Head>
-            <Layout>
-                <Component {...pageProps} />
-                <Analytics/>
-            </Layout>
+            <div className={`${displayFont.variable} ${bodyFont.variable}`}>
+                <Layout>
+                    <Component {...pageProps} />
+                    <Analytics/>
+                </Layout>
+            </div>
         </>
     )
 }

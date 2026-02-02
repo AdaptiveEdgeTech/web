@@ -1,100 +1,46 @@
 import Head from 'next/head'
-import Sponsors from '@/components/Sponsors'
 import Image from 'next/image'
 
 export default function HomePage() {
-
-    const handleScroll = (targetId: string) => {
-        const elem = document.getElementById(targetId)
-        elem?.scrollIntoView({
-            behavior: 'smooth',
-        })
-    }
+    const titleText = 'To adapt is to evolve.'
+    const titleLetters = Array.from(titleText)
 
     return (
         <>
             <Head>
                 <meta name="description" content="Home page for Adaptive Edge Technologies"/>
             </Head>
-            <>
-                <div className="flex flex-row justify-center">
-            {/*image container*/}    
-                           <div className = 'w-48 h-48 relative'>
-                                <Image 
-                                    src="/mascot.png" 
-                                    alt="Super hero mascot" 
-                                    fill={true}
-                                    priority
-                                    sizes='(max-width: 1024x) 100vw, 33vw, (max-height: 1024x) 100vw, 33vw'
-
-                                />
-                            </div>
+            <section className="mx-auto flex min-h-[80vh] max-w-3xl flex-col items-center justify-center px-6 py-20 text-center md:py-24">
+                <div className="space-y-6 md:space-y-8">
+                    <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+                        <div className="relative h-9 w-9 logo-bounce md:h-12 md:w-12">
+                            <Image
+                                src="/picto.svg"
+                                alt="Adaptive Edge icon"
+                                fill
+                                sizes="(max-width: 640px) 36px, 48px"
+                            />
+                        </div>
+                        <h1 className="text-4xl font-medium leading-[1.05] text-black sm:text-5xl md:text-7xl">
+                            <span className="typing-letters" aria-label={titleText}>
+                                {titleLetters.map((letter, index) => (
+                                    <span
+                                        key={`${letter}-${index}`}
+                                        aria-hidden="true"
+                                        className="typing-letter"
+                                        style={{ animationDelay: `${index * 0.06}s` }}
+                                    >
+                                        {letter === ' ' ? '\u00A0' : letter}
+                                    </span>
+                                ))}
+                            </span>
+                        </h1>
+                    </div>
+                    <p className="subcopy-rise mx-auto max-w-xl text-sm font-normal leading-relaxed text-black/70 sm:text-base md:text-lg md:text-black/60">
+                        We build and operate the next generation of AI-native products.
+                    </p>
                 </div>
-                                
-                <div className="text-center content-center my-16">    
-                    <h1 className="flex flex-col leading-none text-6xl lg:text-9xl font-extrabold">
-                        <span
-                            onClick={() => handleScroll('explore-block')}
-                            className='relative select-none bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-emerald-400
-                            dark:before:bg-white before:bg-black before:content-["Explore."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-1'>Explore.</span>
-                        <span
-                            onClick={() => handleScroll('collaborate-block')}
-                            className='relative select-none bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-pink-600
-                            dark:before:bg-white before:bg-black before:content-["Collaborate."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-2'>Collaborate.</span>
-                        <span
-                            onClick={() => handleScroll('empower-block')}
-                            className='relative select-none bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400
-                            dark:before:bg-white before:bg-black before:content-["Empower."] before:absolute before:bg-clip-text before:text-transparent before:animate-gradient-3'>Empower.</span>
-                    </h1>
-                    <h2 className="text-4xl lg:text-5xl mt-24"></h2>
-                    <h3 className="text-2xl lg:text-2xl max-w-4xl mx-auto">Adaptive Edge Technologies: Unleashing the &apos;Super Human&apos; in everyone. Empower individuals and organizations with cutting-edge, human-centered solutions. Elevate potential, innovate, and conquer the world together.</h3>
-                </div>
-                <div id="explore-block" className="text-center content-center my-12 flex flex-col">
-                    <span className="h-16 w-0.5 bg-gradient-to-b from-blue-50 to-blue-400 self-center"/>
-                    <span
-                        className="h-10 w-10 self-center rounded-full text-white bg-gradient-to-r from-blue-600 to-emerald-400 inline-flex justify-center items-center">1</span>
-                    <span
-                        className="font-bold text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-400 self-center my-5">Explore</span>
-                    <span className="font-bold text-4xl mb-6">Looking for new technologies</span>
-                    <p className="max-w-4xl mx-auto my-4">Dive into the world of emerging technologies with Adaptive
-                        Edge Technologies. Our passionate team of innovators is constantly investigating the latest
-                        advancements, seeking to unlock the potential of cutting-edge solutions. We believe that by
-                        embracing the unknown, we can uncover new opportunities and inspire groundbreaking ideas. Join
-                        us on this exciting journey as we explore the technological frontier and redefine the
-                        future.</p>
-                </div>
-                <div id="collaborate-block" className="text-center content-center my-12 flex flex-col">
-                    <span className="h-16 w-0.5 bg-gradient-to-b from-purple-50 to-purple-500 self-center"/>
-                    <span
-                        className="h-10 w-10 self-center rounded-full text-white bg-gradient-to-r from-purple-700 to-pink-600 inline-flex justify-center items-center">2</span>
-                    <span
-                        className="font-bold text-6xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600 self-center my-5">Collaborate</span>
-                    <span className="font-bold text-4xl mb-6">Finding like minded people</span>
-                    <p className="max-w-4xl mx-auto my-4">At Adaptive Edge Technologies, we believe that the best
-                        innovations are born from diverse perspectives and collaborative efforts. Our inclusive
-                        environment encourages open dialogue, knowledge sharing, and creative problem-solving. By
-                        connecting skilled professionals, industry experts, and technology enthusiasts, we create a
-                        thriving ecosystem where ideas can thrive and real-world challenges can be tackled together.
-                        Let&apos;s collaborate and harness the power of collective intelligence to shape the future of
-                        technology.</p>
-                </div>
-                <div id="empower-block" className="text-center content-center my-12 flex flex-col">
-                    <span className="h-16 w-0.5 bg-gradient-to-b from-orange-50 to-orange-400 self-center"/>
-                    <span
-                        className="h-10 w-10 self-center rounded-full text-white bg-gradient-to-r from-orange-600 to-yellow-400 inline-flex justify-center items-center">3</span>
-                    <span
-                        className="font-bold text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-400 self-center my-5">Empower</span>
-                    <span className="font-bold text-4xl mb-6">Giving the power to the people</span>
-                    <p className="max-w-4xl mx-auto my-4">Our mission goes beyond the discovery of new technologies; we
-                        strive to empower individuals and organizations to adapt and excel in the rapidly evolving
-                        technological landscape. By providing resources, tools, and expert guidance, we help our
-                        community harness the power of emerging technologies to drive growth, success, and meaningful
-                        impact. Through our commitment to empowering others, we aim to spark innovation and create a
-                        lasting, positive change in the world.</p>
-                </div>
-                <Sponsors/>
-            
-            </>
+            </section>
         </>
     )
 }

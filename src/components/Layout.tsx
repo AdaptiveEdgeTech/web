@@ -15,7 +15,7 @@ const Layout = ({ children }: PropsWithChildren) => {
     return (
         <>
             <Navbar/>
-            <main className="mb-32 lg:mb-24 dark:text-white">{children}</main>
+            <main className="pb-16">{children}</main>
             <Footer/>
         </>
     )

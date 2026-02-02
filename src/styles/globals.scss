@@ -1,3 +1,101 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        color: #000;
+        background-color: #fff;
+    }
+
+    html, body, #__next {
+        background-color: #fff;
+    }
+
+    body {
+        font-family: var(--font-body);
+        background-color: #fff;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-display);
+        letter-spacing: -0.02em;
+    }
+}
+
+@keyframes letter-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.typing-letters {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.typing-letter {
+    display: inline-block;
+    opacity: 0;
+    animation: letter-reveal 0.35s ease forwards;
+}
+
+@keyframes logo-bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    55% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.logo-bounce {
+    animation: logo-bounce 0.9s ease-out 2.2s both;
+}
+
+@keyframes subcopy-rise {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subcopy-rise {
+    opacity: 0;
+    animation: subcopy-rise 0.6s ease-out 2.2s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .typing-letter {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .logo-bounce,
+    .subcopy-rise {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
