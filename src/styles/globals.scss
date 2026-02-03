@@ -51,14 +51,26 @@
     0% {
         transform: translateY(0);
     }
-    30% {
-        transform: translateY(-10px);
+    24% {
+        transform: translateY(-40px);
     }
-    55% {
+    46% {
         transform: translateY(0);
     }
-    75% {
-        transform: translateY(-4px);
+    62% {
+        transform: translateY(-16px);
+    }
+    74% {
+        transform: translateY(0);
+    }
+    84% {
+        transform: translateY(-10px);
+    }
+    92% {
+        transform: translateY(0);
+    }
+    97% {
+        transform: translateY(-6px);
     }
     100% {
         transform: translateY(0);
@@ -66,7 +78,7 @@
 }
 
 .logo-bounce {
-    animation: logo-bounce 0.9s ease-out 2.2s both;
+    animation: logo-bounce 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 2.2s both;
 }
 
 @keyframes subcopy-rise {

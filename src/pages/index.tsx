@@ -10,7 +10,7 @@ export default function HomePage() {
             <Head>
                 <meta name="description" content="Home page for Adaptive Edge Technologies"/>
             </Head>
-            <section className="mx-auto flex min-h-[80vh] max-w-3xl flex-col items-center justify-center px-6 py-20 text-center md:py-24">
+            <section className="mx-auto flex min-h-full max-w-3xl flex-col items-center justify-center px-6 py-10 text-center md:py-12">
                 <div className="space-y-6 md:space-y-8">
                     <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
                         <div className="relative h-9 w-9 logo-bounce md:h-12 md:w-12">

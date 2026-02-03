@@ -12,12 +12,16 @@ const Layout = ({ children }: PropsWithChildren) => {
         )
     }
 
+    const isHome = router && router.pathname === '/'
+
     return (
-        <>
+        <div className="flex min-h-[100svh] flex-col">
             <Navbar/>
-            <main className="pb-16">{children}</main>
+            <main className={`flex-1 pb-8 ${isHome ? 'flex items-center' : ''}`}>
+                {children}
+            </main>
             <Footer/>
-        </>
+        </div>
     )
 }
 
