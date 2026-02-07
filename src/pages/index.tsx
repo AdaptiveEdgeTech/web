@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 export default function HomePage() {
-    const titleText = 'To adapt is to evolve.'
+    const titleText = 'To adapt is to evolve'
     const titleLetters = Array.from(titleText)
 
     return (
@@ -37,7 +37,7 @@ export default function HomePage() {
                         </h1>
                     </div>
                     <p className="subcopy-rise mx-auto max-w-xl text-sm font-normal leading-relaxed text-black/70 sm:text-base md:text-lg md:text-black/60">
-                        We build and operate the next generation of AI-native products.
+                        We build and operate the next generation of AI-native products
                     </p>
                 </div>
             </section>
